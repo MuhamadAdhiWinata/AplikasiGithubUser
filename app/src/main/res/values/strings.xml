@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Aplikasi GitHub User</string>
+    <string name="followers">Followers</string>
+    <string name="following">Following</string>
+    <string name="image_detail">Profile</string>
+    <string name="repository">Repository</string>
+    <string name="menu">Menu</string>
+    <string name="text_bagikan">Share</string>
+    <string name="more">… learn more</string>
+    <string name="no_users">No User</string>
+    <string name="no_repos">No Repository</string>
+    <string name="dashboard">Home</string>
+    <string name="favorite">Save</string>
+    <string name="search">Search</string>
+    <string name="text_issues">Problem</string>
+    <string name="watchers">Pengamat</string>
+    <string name="text_network">Network</string>
+    <string name="text_description">Deskription</string>
+    <string name="stars">%s stars</string>
+    <string name="forks">%s forks</string>
+    <string name="theme_mode">Tema</string>
+    <string name="text_unknown"><i>Tidak dikenal</i></string>
+    <string name="text_tv_titlee"><font size="20">%1$s</font> <font size="12">%2$2</font></string>
+    <string name="text_tv_title"><annotation fontSize="30">%1$s</annotation> %2$s</string>
+    <string name="text_last_updated">Last Update</string>
+</resources>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/dashboard">
+    <fragment
+        android:id="@+id/dashboard"
+        android:name="com.adhi.githubuser.ui.main.dashboard.DashboardFragment"
+        android:label="fragment_dashboard"
+        tools:layout="@layout/fragment_dashboard" >
+        <action
+            android:id="@+id/action_dashboard_to_detailFragment"
+            app:destination="@id/detailFragment"
+            app:enterAnim="@android:anim/slide_in_left" />
+        <action
+            android:id="@+id/action_dashboard_to_onSearchFragment"
+            app:destination="@id/onSearchFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/favorite"
+        android:name="com.adhi.githubuser.ui.main.favorite.FavoriteFragment"
+        android:label="fragment_favorite"
+        tools:layout="@layout/fragment_favorite" >
+        <action
+            android:id="@+id/action_favorite_to_detailFragment"
+            app:destination="@id/detailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.adhi.githubuser.ui.detail.DetailFragment"
+        android:label="{username}"
+        tools:layout="@layout/fragment_detail">
+        <action
+            android:id="@+id/action_detailFragment_self"
+            app:destination="@id/detailFragment"
+            app:enterAnim="@android:anim/slide_in_left" />
+        <argument
+            android:name="username"
+            android:defaultValue="user"
+            app:argType="string"
+            app:nullable="true" />
+        <action
+            android:id="@+id/action_detailFragment_to_repositoryFragment"
+            app:destination="@id/detailRepoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailRepoFragment"
+        android:name="com.adhi.githubuser.ui.detailrepo.DetailRepoFragment"
+        android:label="fragment_repository"
+        tools:layout="@layout/fragment_detail_repo" >
+        <argument
+            android:name="username"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue="user" />
+        <argument
+            android:name="repository_name"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue="repo" />
+    </fragment>
+    <fragment
+        android:id="@+id/onSearchFragment"
+        android:name="com.adhi.githubuser.ui.main.onsearch.OnSearchFragment"
+        android:label="fragment_on_search"
+        tools:layout="@layout/fragment_on_search" >
+        <action
+            android:id="@+id/action_onSearchFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+    </fragment>
+</navigation>
